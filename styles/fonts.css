@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Tiny5&display=swap");
+
+.rubik-glitch-regular {
+  font-family: "Rubik Glitch", system-ui;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.tiny5-regular {
+  font-family: "Tiny5", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}

@@ -1,0 +1,40 @@
+/* Hover effects */
+
+a {
+  padding: 0px;
+  margin: 0px;
+  transition: 1s;
+}
+.showcase > a {
+  background-color: black;
+}
+a:hover {
+  background-color: greenyellow;
+  scale: 1.04;
+  transition: 1s;
+}
+
+a:hover * {
+  color: black;
+}
+
+/* Animación */
+
+@keyframes beat {
+  0%,
+  50%,
+  100% {
+    transform: scale(1, 1);
+    background-color: rgb(40, 20, 65);
+  }
+  30%,
+  80% {
+    transform: scale(0.92, 0.95);
+    background-color: black;
+  }
+}
+
+body {
+  position: relative;
+  animation: 1s ease 0s infinite beat;
+}

@@ -1,0 +1,96 @@
+#contact {
+  display: grid;
+  grid-template-columns: 100%;
+  margin: 20px 20px 40px 20px;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 80px auto auto;
+  margin-bottom: 40px;
+  gap: 10px;
+}
+
+#contact > h2 {
+  text-align: center;
+}
+
+#contact .contact-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#contact .contact-options > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12px;
+  border-radius: 4px;
+  scale: 0.8;
+}
+
+@media (min-width: 600px) {
+  #contact {
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 80px auto auto;
+    margin-bottom: 40px;
+    gap: 10px;
+  }
+
+  #contact > *:nth-child(1) {
+    grid-row: 1/2;
+  }
+
+  #contact > *:nth-child(2) {
+    grid-row: 2/3;
+  }
+
+  #contact > *:nth-child(3) {
+    grid-row: 3/4;
+  }
+  #contact .contact-options > a {
+    padding: 0px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    scale: 1;
+  }
+
+  #contact .contact-options > a:hover > li {
+    color: black;
+    transition: 0.5s;
+  }
+  #contact > h2 {
+    text-align: center;
+  }
+  #contact .contact-options {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 900px) {
+  #contact {
+    justify-items: baseline;
+    align-items: center;
+    grid-template-rows: 60px auto auto;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    margin-left: 0px;
+    gap: 10px;
+    margin-right: 20px;
+  }
+
+  #contact .contact-options {
+    align-items: center;
+  }
+  #contact .contact-options > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 12px;
+    margin: 0px;
+  }
+
+}

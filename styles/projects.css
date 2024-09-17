@@ -1,0 +1,148 @@
+#projects {
+  border-top: 1px solid white;
+  margin: 0px 20px;
+}
+
+#projects > h2 {
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 48px;
+}
+
+#projects > .showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#projects > .showcase > a {
+  display: grid;
+  text-align: center;
+  border: 1px solid white;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "title"
+    "img"
+    "info";
+}
+
+#projects > .showcase .project > img {
+  padding: 20px !important;
+  grid-area: img;
+  width: 100%;
+  height: auto;
+}
+
+#projects > .showcase .project > h3 {
+  font-size: medium;
+  grid-area: title;
+}
+
+#projects > .showcase .project > p {
+  font-size: small;
+  grid-area: info;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 375px) {
+  #projects > .showcase .project {
+    font-size: medium;
+  }
+  #projects > .showcase .project > h3 {
+    font-size: large;
+  }
+}
+
+@media (min-width: 480px) {
+  #projects > .showcase .project {
+    font-size: large;
+  }
+  #projects > .showcase .project > h3 {
+    font-size: x-large;
+  }
+  #projects > .showcase > a:nth-child(odd) > .project {
+    grid-template-columns: 50% auto;
+    grid-template-areas:
+      "title title"
+      "img info";
+  }
+
+  #projects > .showcase > a:nth-child(even) .project {
+    grid-template-columns: 50% auto;
+    grid-template-areas:
+      "title title"
+      "info img";
+  }
+  #projects > .showcase > a .project > h3 {
+    margin: 20px 0px;
+  }
+  #projects > .showcase > a .project > img {
+    padding: 0px 20px 20px 20px;
+  }
+
+  @media (min-width: 600px) {
+    #projects > .showcase {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+    #projects > .showcase .project {
+      align-items: center;
+      grid-template-columns: 33vw;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "title title"
+        "img img"
+        "info info" !important;
+    }
+
+    #projects > .showcase .project > img {
+      grid-area: img;
+      width: 100%;
+      height: auto;
+      padding: 0px 20px 20px 20px;
+    }
+    #projects > .showcase .project > h3 {
+      grid-area: title;
+    }
+
+    #projects > .showcase .project > p {
+      grid-area: info;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  #projects {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  #projects > .showcase {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: stretch;
+  }
+  #projects > .showcase .project {
+    align-items: center;
+    grid-template-columns: 33vw;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "title title"
+      "img img"
+      "info info" !important;
+  }
+
+  #projects > .showcase .project > img {
+    grid-area: img;
+    width: 100%;
+    height: auto;
+  }
+
+  #projects > .showcase .project > h3 {
+    grid-area: title;
+  }
+
+  #projects > .showcase .project > p {
+    grid-area: info;
+  }
+}
