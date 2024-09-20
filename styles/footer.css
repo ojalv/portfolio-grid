@@ -3,4 +3,10 @@
   padding: 10px;
   margin: 20px;
   width: calc(100% - 40px);
+  font-size: small;
+}
+
+#footer > * {
+  color: greenyellow;
+  font-weight: bold;
 }

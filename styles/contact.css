@@ -1,22 +1,27 @@
 #contact {
-  display: grid;
-  grid-template-columns: 100%;
-  margin: 20px 20px 40px 20px;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  grid-template-rows: 80px auto auto;
-  margin-bottom: 40px;
-  gap: 10px;
+  margin: 0px 20px;
+  text-align: center;
+}
+
+#contact > *:not(p) {
+  width: 100%;
 }
 
 #contact > h2 {
-  text-align: center;
+  margin: 20px;
 }
 
 #contact .contact-options {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 10px;
   justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 #contact .contact-options > a {
@@ -26,71 +31,53 @@
   align-items: center;
   padding: 0px 12px;
   border-radius: 4px;
-  scale: 0.8;
+}
+
+#contact .contact-options > a > li {
+  color: var(--verde-1);
+  text-wrap: nowrap;
 }
 
 @media (min-width: 600px) {
   #contact {
-    justify-items: center;
-    align-items: center;
-    grid-template-rows: 80px auto auto;
-    margin-bottom: 40px;
-    gap: 10px;
+    text-align: center;
+  }
+  #contact > p {
+    width: 70%;
+  }
+  #contact .contact-options {
+    flex-direction: row;
+    margin-top: 40px;
   }
 
-  #contact > *:nth-child(1) {
-    grid-row: 1/2;
-  }
-
-  #contact > *:nth-child(2) {
-    grid-row: 2/3;
-  }
-
-  #contact > *:nth-child(3) {
-    grid-row: 3/4;
-  }
   #contact .contact-options > a {
     padding: 0px 24px;
     border-radius: 8px;
     cursor: pointer;
-    scale: 1;
-  }
-
-  #contact .contact-options > a:hover > li {
-    color: black;
-    transition: 0.5s;
-  }
-  #contact > h2 {
-    text-align: center;
-  }
-  #contact .contact-options {
-    justify-content: center;
-    gap: 10px;
   }
 }
 
 @media (min-width: 900px) {
   #contact {
-    justify-items: baseline;
-    align-items: center;
-    grid-template-rows: 60px auto auto;
-    margin-bottom: 40px;
-    margin-top: 0px;
-    margin-left: 0px;
-    gap: 10px;
-    margin-right: 20px;
+    margin: 0px 20px 0px 0px;
+    text-align: left;
+  }
+
+  #contact > p {
+    width: 100%;
   }
 
   #contact .contact-options {
-    align-items: center;
+    margin-top: 40px;
+    flex-direction: row;
   }
   #contact .contact-options > a {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 6px;
     padding: 0px 12px;
     margin: 0px;
   }
-
 }

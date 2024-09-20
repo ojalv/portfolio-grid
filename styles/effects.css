@@ -6,35 +6,55 @@ a {
   transition: 1s;
 }
 .showcase > a {
-  background-color: black;
+  background-color: var(--negro-2);
 }
 a:hover {
   background-color: greenyellow;
   scale: 1.04;
-  transition: 1s;
+  transition: 0.2s;
 }
 
 a:hover * {
-  color: black;
+  color: black !important;
 }
 
-/* Animación */
-
-@keyframes beat {
-  0%,
-  50%,
+@keyframes borderColorShift {
+  0% {
+    border-color: white;
+  }
+  50% {
+    border-color: greenyellow;
+  }
   100% {
-    transform: scale(1, 1);
-    background-color: rgb(40, 20, 65);
-  }
-  30%,
-  80% {
-    transform: scale(0.92, 0.95);
-    background-color: black;
+    border-color: white;
   }
 }
 
-body {
-  position: relative;
-  animation: 1s ease 0s infinite beat;
+@keyframes rotateBox {
+  0% {
+    rotate: 0.2deg;
+  }
+  50% {
+    rotate: -0.2deg;
+  }
+  100% {
+    rotate: 0.2deg;
+  }
+}
+
+#projects {
+  border-top-color: var(--verde-1);
+}
+
+#projects .project {
+  animation: borderColorShift 2s infinite;
+}
+
+#projects a {
+  animation: rotateBox 2s infinite;
+
+}
+
+#footer {
+  border-top-color: var(--verde-1);
 }
